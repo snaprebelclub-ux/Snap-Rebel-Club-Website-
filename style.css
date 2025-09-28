@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+    --text-color: #f0f0f0;
+    --background-color: #000;
+    --accent-color: #27ff00;
+    --card-bg-color: rgba(0, 0, 0, 0.7);
+    --border-radius: 15px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    background-image: url('1000002210.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+h1, h2, h3, h4 {
+    color: var(--accent-color);
+    text-shadow: 2px 2px 0 var(--background-color);
+}
+
+.main-header, .nft-section, .roadmap-section, .connect-section, .main-footer {
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+/* Header Section */
+.main-header {
+    padding-top: 10vh;
+}
+
+.main-header h1 {
+    font-size: clamp(2rem, 10vw, 5rem);
+    margin-bottom: 2rem;
+}
+
+.main-header p {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.main-nft-card {
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    max-width: 400px;
+    margin: 0 auto 2rem;
+    border: 2px solid var(--accent-color);
+}
+
+.nft-image-placeholder img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+/* Common Styles for Sections */
+.section-title {
+    font-size: clamp(2rem, 8vw, 4rem);
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subsection-title {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subsection-text {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* NFT Grid */
+.nft-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nft-grid-single {
+    display: flex;
+    justify-content: center;
+}
+
+.nft-card {
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--accent-color);
+    padding: 1.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.nft-info {
+    flex-grow: 1;
+    margin-top: 1rem;
+}
+
+.nft-rarity {
+    color: #fff;
+    font-size: 0.9rem;
+    background-color: var(--accent-color);
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.nft-price {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.nft-card .nft-title {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    text-shadow: none;
+    margin-bottom: 0.25rem;
+}
+
+.nft-card .nft-description {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* Roadmap Section */
+.roadmap-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.roadmap-card {
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+}
+
+.roadmap-icon {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--background-color);
+    background-color: var(--accent-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 1.5rem;
+}
+
+.roadmap-content h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.roadmap-content p {
+    font-size: 1rem;
+}
+
+/* Connect Section */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-icon {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: var(--accent-color);
+}
+
+.input-group {
+    display: flex;
+    max-width: 450px;
+    margin: 0 auto;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: var(--card-bg-color);
+    border: 2px solid var(--accent-color);
+}
+
+.input-group input {
+    flex-grow: 1;
+    border: none;
+    padding: 1rem;
+    background: transparent;
+    color: var(--text-color);
+    outline: none;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+.input-group .btn-join {
+    border-radius: 0;
+    margin: 0;
+    padding: 1rem 1.5rem;
+}
+
+/* Buttons */
+.btn-join, .btn-links {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-join:hover, .btn-links:hover {
+    background-color: #1aff00;
+}
+
+.btn-join i, .btn-links i {
+    margin-left: 0.5rem;
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--card-bg-color);
+    border-top: 2px solid var(--accent-color);
+    padding: 2rem;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin: 1rem 0;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .roadmap-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .roadmap-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
